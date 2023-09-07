@@ -1,4 +1,6 @@
+
 body{
+    margin: 0px;
     display: flex;
     flex-direction: row;
     font-family: "Open Sans", Arial, sans-serif;
@@ -6,6 +8,7 @@ body{
     line-height: 1.5;
     background-color: #FFF;
     color : #4d4e53
+
 }
 
 header {
@@ -15,16 +18,29 @@ header {
 
 #navbar{
     height: 100vh;
-    width: 25%;
+    border-right : solid;
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 290px;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+    overflow: scroll;
 }
 
 #main-doc{
     width: 75%;
     height: 100vh;
+    position: absolute;
+    margin-left : 310px;
+    padding : 10px;
 }
 
 li{
     margin : 1rem;
+
 }
 
 .nav-link{
@@ -34,7 +50,7 @@ li{
 
 #ul-navbar{
     list-style-type: none;
-   
+    padding : 5px;
 }
 
 code{
@@ -46,4 +62,27 @@ code{
     padding : 15px;
     margin-left : 15px;  
     line-height: 2;
+}
+
+
+#navbar header{
+ text-align: center;
+}
+
+#navbar li {
+    border-top : 1px solid black;
+    padding : 5px 30px; 
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+@media only screen and (max-width: 600px){
+	#navbar{
+        display: none;
+    }
+
+    #main-doc{
+        margin-left: 5rem;
+    }
 }
